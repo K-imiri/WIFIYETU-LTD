@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Title and Favicon-->
+    <title>WIFIYETULTD | Home</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!--Fonts and icons-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af00e5b4e4.js" crossorigin="anonymous"></script>
+
+    <!--Tailwinds CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    
+    <!--Navigation Bar-->
+    <nav class="p-4 text-white width-auto bg-[#18A0FB] drop-shadow-md">
+        <div class="flex justify-between items-center md:px-20">
+            
+            <!--Logo-->
+            <div class="md:p-2 text-xl">
+                <a href="#" class="font-[Montserrat]">WIFIYETULTD</a>
+            </div>
+            
+            <!--Menu links-->
+            <div class="menu-links md-static absolute md:bg-transparent bg-[#18A0FB] md:min-h-fit min-h-[20vh] md:top-auto top-[-500%] md:w-auto w-full md:left-[35%] left-0 md:pt-0 pt-5 px-5 flex">
+                <ul class="flex md:flex-row flex-col md:items-center font-[Poppins] gap-[5vw]">
+                    <li><a href="#" class="text-gray-300">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Profile</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Messages</a></li>
+                </ul>
+            </div>
+
+            <!--Menu button-->
+            <div class="md:block">
+                <a href="#" class="bg-white  text-black rounded-full md:px-8 px-5 md:py-2.5 py-1.5 font-[Poppins] hover:bg-transparent hover:text-white hover:border-2">Log out</a>
+            </div>
+
+            <!--Menu icon for small screen-->
+            <div class="md:hidden flex items-center text-xl">
+                <i class="fa fa-bars fa-xl cursor-pointer" onclick="onToggle(this)"></i>  
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <!--Javascript-->
+    <script>
+        //Toggle function to display menu-items on small screen
+        let navLinks=document.querySelector('.menu-links');
+        function onToggle(e){
+            e.className=e.className==='fa fa-bars fa-xl cursor-pointer'? 'fa fa-close fa-xl cursor-pointer' : 'fa fa-bars fa-xl cursor-pointer';
+            navLinks.classList.toggle("top-[100%]")
+        }
+    </script>
+</body>
+</html>
