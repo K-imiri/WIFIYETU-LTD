@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Title and Favicon-->
+    <title>WIFIYETULTD | Home</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!--Fonts and icons-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af00e5b4e4.js" crossorigin="anonymous"></script>
+
+    <!--Tailwinds CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="p-4 text-white bg-[#0079D3] drop-shadow-xl">
+        <div class="flex justify-between items-center w-auto md:w-10/12 md:mx-auto">
+
+            <!--Logo-->
+            <div class="text-xl">
+                <a href="#" class="font-[Montserrat] font-bold">WIFIYETULTD</a>
+            </div>
+
+            <!--Menu links-->
+            <div
+                class="menu-links md:static absolute md:bg-transparent bg-[#0079D3] md:min-h-fit min-h-[20vh] md:top-auto top-[-500%] md:w-auto w-full  left-0 px-5 flex">
+                <ul class="flex md:flex-row flex-col md:items-center font-[Montserrat] md:gap-8 gap-4 my-4 ">
+                    <li><a href="#" class="text-[#D7D6D6]">Home</a></li>
+                    <li><a href="#" class="hover:text-[#D7D6D6]">Packages</a></li>
+                    <li><a href="#" class="hover:text-[#D7D6D6]">Contacts</a></li>
+                </ul>
+            </div>
+
+             <!--Menu button-->
+             <div class="flex">
+                <a href="#" class="bg-transparent text-white border-2 rounded-full px-7 py-1 md:px-12 md:py-2 font-[Montserrat]  hover:text-[#D7D6D6] hover:border-gray-300">Log in</a>
+            </div>
+
+
+            <!--Menu icon for small screen-->
+            <div class="md:hidden text-xl">
+                <i class="fa fa-bars fa-xl cursor-pointer" onclick="onToggle(this)"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--Hero Section-->
+    <section id="hero">
+        <!--Flex container-->
+        <div class="flex flex-col md:flex-row mt-10 w-10/12 mx-auto items-center space-y-0">
+            <!--Hero Text-->
+            <div class="flex flex-col mb-10 md:mb-32 space-y-10">
+                <h1 class="max-w-lg text-3xl font-bold text-center md:text-left md:text-4xl font-[Montserrat]">
+                    <span class="text-[#0079D3]">EXPERIENCE</span> THE FREEDOM OF <span class="text-[#0079D3]">UNLIMITED DATA</span> AT UNBEATABLE PRICE.
+                </h1>
+
+                <p class="max-w-md text-center md:text-left font-[Open Sans] text-xl">
+                    We provide top-notch internet services tailored to your needs!
+                </p>
+
+                <div class="flex justify-center md:justify-start">
+                    <a href="" class="rounded px-16 py-5 bg-[#0079D3] text-white font-[Montserrat] font-medium md:px-20 hover:bg-[#0049A2]">Explore Plan</a>
+                </div>
+
+            </div>
+            <!--Hero Image-->
+            <div class="w-3/4 lg:w-6/12 items-center">
+                <img src="./images/remote-5491798_1280.png" alt="..." class="md:pl-20 lg:mt-[-15%]">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Javascript-->
+    <script>
+        //Toggle function to display menu-items on small screen
+        let navLinks = document.querySelector('.menu-links');
+        function onToggle(e) {
+            e.className = e.className === 'fa fa-bars fa-xl cursor-pointer' ? 'fa fa-close fa-xl cursor-pointer' : 'fa fa-bars fa-xl cursor-pointer';
+            navLinks.classList.toggle("top-[100%]")
+        }
+    </script>
+
+
+</body>
+</html>
